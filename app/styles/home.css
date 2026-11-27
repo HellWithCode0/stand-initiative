@@ -1,0 +1,365 @@
+/* Hero */
+
+.hero {
+  padding-block: clamp(32px, 6vw, 80px) clamp(16px, 3vw, 40px);
+}
+
+.hero-grid {
+  display: grid;
+  gap: 48px;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 56px;
+    align-items: center;
+  }
+}
+
+.hero-copy {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+}
+
+.hero-title {
+  font-size: clamp(3.25rem, 0.9rem + 9.4vw, 8.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+}
+
+.hero-lede {
+  max-width: 33em;
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  width: 100%;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-facts dt {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-facts dd {
+  font-weight: 700;
+}
+
+.hero-court {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+  padding: clamp(10px, 1.6vw, 16px);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (min-width: 960px) {
+  .hero-court {
+    justify-self: end;
+  }
+}
+
+.court-art {
+  width: 100%;
+  height: auto;
+}
+
+.court-lines {
+  fill: none;
+  stroke: rgba(245, 241, 232, 0.5);
+  stroke-width: 2;
+}
+
+.court-numbers text {
+  fill: rgba(245, 241, 232, 0.62);
+  font-family: var(--font-mono), monospace;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.court-shadow {
+  fill: rgba(0, 0, 0, 0.38);
+}
+
+.court-red {
+  fill: var(--red-bright);
+}
+
+.court-blue {
+  fill: var(--blue-bright);
+}
+
+.court-jack {
+  fill: var(--white);
+}
+
+.court-seam {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.24);
+  stroke-width: 1.5;
+}
+
+.court-shine {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.court-piece {
+  animation: roll-in 1.15s var(--ease) both;
+  animation-delay: var(--delay);
+}
+
+@keyframes roll-in {
+  from {
+    transform: translate(var(--dx), var(--dy));
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.hero-court figcaption {
+  padding: 12px 6px 4px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--paper-on-ink);
+}
+
+/* Why it matters */
+
+.subhead {
+  margin-bottom: 16px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.barriers {
+  display: grid;
+  border-top: 3px solid var(--ink);
+}
+
+@media (min-width: 720px) {
+  .barriers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 48px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .barriers {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+}
+
+.barrier {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 24px 0 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.barrier-num {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 72;
+  font-size: 3.25rem;
+  line-height: 1;
+  color: var(--red);
+}
+
+.barrier-title {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 80;
+  font-size: var(--step-2);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.barrier p {
+  color: var(--ink-soft);
+}
+
+/* Approach */
+
+.strands {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .strands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .strands {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.strand {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.strand-verb {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 72;
+  font-size: var(--step-3);
+  line-height: 1;
+}
+
+.strand p {
+  color: var(--ink-soft);
+}
+
+.section-link {
+  margin-top: 32px;
+}
+
+/* Programme cards */
+
+.programme-cards {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .programme-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.programme-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-height: 400px;
+  padding: 132px 28px 28px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  transition: background-color 0.2s var(--ease);
+}
+
+.programme-card:hover {
+  background: var(--paper-3);
+}
+
+.programme-card-ball {
+  position: absolute;
+  top: -96px;
+  right: -64px;
+  width: 230px;
+  transition: transform 0.6s var(--ease);
+}
+
+.programme-card:hover .programme-card-ball {
+  transform: translateX(-10px) rotate(-36deg);
+}
+
+.programme-focus {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.programme-name {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 72;
+  font-size: var(--step-3);
+  line-height: 1;
+}
+
+.programme-kind {
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.programme-summary {
+  color: var(--ink-soft);
+}
+
+.programme-card .arrow-link {
+  align-self: end;
+  margin-top: 12px;
+}
+
+/* Who we are */
+
+.trust-grid {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 960px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px;
+    align-items: start;
+  }
+}
+
+.person-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 20px;
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+}
+
+.person-card > div:last-child {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.person-name {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 75;
+  font-size: var(--step-3);
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .person-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
